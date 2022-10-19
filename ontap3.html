@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<!--Nhập vào a, b, c, kiểm tra xem a, b, c có phải là 3 cạnh của-->
+<!--(ae chủ động tìm lại điều kiện lần lượt của các câu):-->
+<!--1 tam giác?-->
+<body>
+<script>
+    let a = +prompt("Nhap vao canh a")
+    let b = +prompt("Nhap vao canh b")
+    let c = +prompt("Nhap vao canh c")
+    if (a + b > c && a + c > b && b + c > a) {
+        if (a*a + b*b === c*c || b*b + c*c === a*a || a*a + c*c === b*b) {
+            document.write("Tam giac co canh: " + a + "," + b + "," + c + "la tam giac vuong")
+        }
+        else if (a === b && b === c) {
+            document.write("Tam giac co canh: " + a + "," + b + "," + c + "la tam giac deu")
+        }
+        else if (a===b || a === c || b === c) {
+            document.write("Tam giac co canh: " + a + "," + b + "," + c + "la tam giac can")
+        }
+    }
+    else {
+        document.write("3 canh: " + a + "," + b + "," + c + " khong la canh cua tam giac")
+    }
+
+</script>
+</body>
+</html>

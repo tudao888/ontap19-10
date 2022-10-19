@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p id="the1"></p>
+<p id="the2"></p>
+<p id="the3"></p>
+<p id="the4"></p>
+<p id="the5"></p>
+<p id="the6"></p>
+<p id="the7"></p>
+<script>
+    let n = +prompt("nhap vao so phan tu mang");
+    let a = prompt("Nhap vao " + n + "phan tu").split(",");
+    document.getElementById("the1").innerHTML = a;
+    // tinh tong
+    let tong1 = 0;
+    let tong2 = 0;
+    let tong3 = 0;
+    let TBC = 0;
+    let count = 0;
+    let max1 = 0;
+    let max2 = 0;
+    for (let i = 0; i < a.length; i++) {
+        tong1 += parseInt(a[i]);
+    }
+    document.getElementById("the2").innerHTML = tong1;
+    // // tinh tong cac phan tu chia 5 du 2
+    for (let b of a) {
+        if (b%5 - 2 === 0) {
+            tong2 +=b;
+        }
+    }
+    document.getElementById("the3").innerHTML = tong2;
+    // // dem so phan tu chia het cho 6;
+    for ( let d of a) {
+        if (d%6 === 0) {
+            count ++;
+        }
+    } document.getElementById("the4").innerHTML = count;
+
+    // TBC cac phan tu > 10 chia 4 du 3
+    for (let e of a) {
+        if (e > 10 && e%4-3 === 0) {
+            tong3 += e;
+            count++;
+        } TBC = tong3/count;
+    } document.getElementById("the5").innerHTML = TBC;
+
+    // tim max cua mang;
+    for (let g of a) {
+        if (g>max1) {
+            max1 = g;
+        }
+    } document.getElementById("the6").innerHTML = max1;
+
+    // tim max cua cac so le trong mang
+    for (let h of a) {
+        if (h>max2) {
+            max2 = h;
+        }
+        if (h%2 === 1) {
+                max2 = h;
+        }
+        } document.getElementById("the7").innerHTML = max2;
+
+
+    // tim vi tri cua x (nhap vao bang prompt) trong mang
+    let x = prompt("Nhap vao x");
+    if (a.indexOf(x)!==-1) {
+        document.getElementById("the8").innerHTML = (a.indexOf(x))
+    } else {document.getElementById("the8").innerHTML = a.indexOf(x);}
+
+
+</script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--Nhập vào a và b, tính a^2, a^b-->
+<!--Nhập vào a và b, tính tổng các số từ a đến b-->
+<script>
+  let a = +prompt("Nhap vao so a");
+  let b = +prompt("Nhap vao so b");
+  let tong = 0;
+  let c = a**2;
+  let d = a**b;
+  document.write(a + " mu " + 2 + " bang :" + c + "<br>")
+  document.write(a + " mu " + b + " bang :" + d)
+  for (let i = a; i<=b; i++) {
+    if (a>b) {
+        alert("khong thoa man vi a phai nho hon b");
+        break;
+    }
+    else if (a<b) {
+      tong += i;
+    }
+  } document.write(tong)
+</script>
+</body>
+</html>
