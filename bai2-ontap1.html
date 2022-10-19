@@ -12,6 +12,7 @@
 <p id="the5"></p>
 <p id="the6"></p>
 <p id="the7"></p>
+<p id="the8"></p>
 <script>
     let n = +prompt("nhap vao so phan tu mang");
     let a = prompt("Nhap vao " + n + "phan tu").split(",");
@@ -69,10 +70,14 @@
 
 
     // tim vi tri cua x (nhap vao bang prompt) trong mang
+    let check = true;
     let x = prompt("Nhap vao x");
-    if (a.indexOf(x)!==-1) {
-        document.getElementById("the8").innerHTML = (a.indexOf(x))
-    } else {document.getElementById("the8").innerHTML = a.indexOf(x);}
+for (let i = 0;i<a.length; i++) {
+    if (a[i] === x) {
+        document.getElementById("the8").innerHTML = i;
+        check = false;
+    }
+} if (check) {document.getElementById("the8").innerHTML = "x khong nam trong day"} ;
 
 
 </script>

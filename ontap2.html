@@ -15,15 +15,17 @@
   let d = a**b;
   document.write(a + " mu " + 2 + " bang :" + c + "<br>")
   document.write(a + " mu " + b + " bang :" + d)
-  for (let i = a; i<=b; i++) {
-    if (a>b) {
-        alert("khong thoa man vi a phai nho hon b");
-        break;
-    }
-    else if (a<b) {
-      tong += i;
-    }
-  } document.write(tong)
+  if (a>b) {
+      for (let i = a; i<=b; i++) {
+          tong+=i;
+      } alert(tong)
+  }
+  else (a<b) {
+      for (let i = b; i<=a; b++) {
+          tong +=i
+      } alert(tong)
+  }
+
 </script>
 </body>
 </html>
